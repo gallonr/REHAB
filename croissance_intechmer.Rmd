@@ -1,0 +1,39 @@
+---
+title: "Suivi de la croissance de la salicorne"
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,fig.align="center")
+require(tidyverse)
+require(plotly)
+require(lubridate)
+```
+
+### 27/05/2020
+
+```{r S27052020plot}
+S27052020 <- readxl::read_xlsx("./data/culture_Intechmer/fichier_donnees_culture.xlsx",sheet="27052020")
+S27052020 <- S27052020 %>% gather(-taille,key="bac",value="nombre") %>% drop_na() %>% group_by(bac) %>% mutate(nbPourc=(nombre/sum(nombre))*100)
+S27052020$taille <- factor(S27052020$taille,c("< 1cm","]1;2cm]","]2;4cm]","]4;6cm]","]6;8cm]"),ordered=T)
+ggplot(S27052020,aes(x=taille,y=nbPourc))+geom_bar(stat="identity")+facet_wrap(~bac,ncol=3)+
+  ylab("Pourcentage")+xlab("Classes de taille")+
+  theme(strip.text = element_text(face="bold",size=10),
+        axis.title = element_text(face="italic",size=12),
+        axis.text.x = element_text(angle=90,vjust=0.5))
+```
+
+### 10/06/2020
+
+```{r S10062020plot}
+S10062020 <- readxl::read_xlsx("./data/culture_Intechmer/fichier_donnees_culture.xlsx",sheet="10062020")
+S10062020 <- S10062020 %>% gather(-taille,key="bac",value="nombre") %>% drop_na() %>% group_by(bac) %>% mutate(nbPourc=(nombre/sum(nombre))*100)
+S10062020$taille <- factor(S10062020$taille,c("< 1cm","]1;2cm]","]2;4cm]","]4;6cm]","]6;8cm]","]8;10cm]"),ordered=T)
+ggplot(S10062020,aes(x=taille,y=nbPourc))+geom_bar(stat="identity")+facet_wrap(~bac,ncol=3)+
+  ylab("Pourcentage")+xlab("Classes de taille")+
+  theme(strip.text = element_text(face="bold",size=10),
+        axis.title = element_text(face="italic",size=12),
+        axis.text.x = element_text(angle=90,vjust=0.5))
+```
+

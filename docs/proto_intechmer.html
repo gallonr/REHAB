@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Protocoles</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">REHAB</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="partenaires.html">
+    <span class="fa fa-user-friends"></span>
+     
+    Partenaires
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-envira"></span>
+     
+    Expérimentation Intechmer
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="proto_intechmer.html">Protocole</a>
+    </li>
+    <li>
+      <a href="bac_intechmer.html">Suivi bacs de culture</a>
+    </li>
+    <li>
+      <a href="croissance_intechmer.html">Suivi croissance salicorne</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-envira"></span>
+     
+    Expérimentation SMEL
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="proto_smel.html">Protocole</a>
+    </li>
+    <li>
+      <a href="resultat_smel.html">Résultats</a>
+    </li>
+    <li>
+      <a href="suivi_claires.html">Suivi des claires</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="bibliographie.html">
+    <span class="fa fa-newspaper"></span>
+     
+    Bibliographie
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:RégisGALLON&lt;regis.gallon@lecnam.net&gt;?subject=[REHAB]">
+    <span class="fa fa-envelope"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/gallonr/REHAB">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Protocoles</h1>
+
+</div>
+
+
+<div id="culture-de-la-salicorne" class="section level3">
+<h3>Culture de la Salicorne</h3>
+<div id="récolte-de-graines-à-partir-de-plants-sauvages" class="section level4">
+<h4>Récolte de graines à partir de plants “sauvages”</h4>
+<p>Des plants matures ont été récoltés à proximité de la CABANOR dans le havre de Blainville en octobre 2019. Ces plants ont été triés pour ne sélectionner que l’espèce <em>Salicornia europaea</em>. Ils sont ensuite placés dans une étuve à 40°C pendant 24h puis stockés dans des sachets étanches (type ZipLock) pour les protéger de l’humidité.</p>
+<div class="figure" style="text-align: center"><span id="fig:etuveSalicorne"></span>
+<img src="figures/proto_intechmer/sechagesalicorne.jpg" alt="Séchage des plants matures dans une étuve à 40°C pendant 24h" width="50%" />
+<p class="caption">
+Figure 1: Séchage des plants matures dans une étuve à 40°C pendant 24h
+</p>
+</div>
+<p>Les graines sont extraites des plants sur une colonne de tamisage comportant 3 tamis (1mm, 630<span class="math inline">\(\mu m\)</span>, 250<span class="math inline">\(\mu m\)</span>). Seules les parties fertiles (contenant les graines) sont conservées puis sont broyés à la main sur le tamis de 1mm pendant 5 minutes minimum pour s’assurer que toutes les graines sont bien sorties des les loges. Les graines et quelques résidus se retrouvent dans le refus du tamis de 250<span class="math inline">\(\mu m\)</span>.</p>
+<p>La séparation des graines et des résidus se réalise par gravité dans de l’eau douce. En agitant régulièrement le mélange dans un récipient adapté, les graines vont sédimenter et s’agglomérer au fond et les résidus vont rester en surface. Cette phase ne dure pas plus de 5 minutes car les résidus vont s’hydrater et sédimenter par la suite. Plusieurs bains sont possibles en éliminant à chaque fois le surnageant afin d’obtenir un amas de graine homogène au fond du récipient.</p>
+<p>Les graines sont ensuite récupérées à l’aide du tamis de 250 <span class="math inline">\(\mu m\)</span> puis séchées à l’étuve à 40°C pendant 24h en agitant régulièrement le contenant pour homogénéiser le séchage. Les graines peuvent ensuite être stockées dans un récipient sec et étanche pour la conservation à long terme.</p>
+<div class="figure" style="text-align: center"><span id="fig:conservationGraine"></span>
+<img src="figures/proto_intechmer/conservation.jpg" alt="Stockage des graines après séchage pour une conservation à long terme" width="40%" />
+<p class="caption">
+Figure 2: Stockage des graines après séchage pour une conservation à long terme
+</p>
+</div>
+</div>
+<div id="prélèvement-du-sédiment-pour-la-culture-de-salicorne" class="section level4">
+<h4>Prélèvement du sédiment pour la culture de salicorne</h4>
+<p>Afin de réaliser des cultures avec un sédiment proche de celui des claires de la CABANOR, du sédiment prélevé a été prélevé au pont de la Roque (50, Figure <a href="#fig:cartesediment">3</a>). Les caractéristiques de ce sédiment seront détaillées dans la page <a href="resultat_intechmer.html">Résultat</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:cartesediment"></span>
+<img src="proto_intechmer_files/figure-html/cartesediment-1.png" alt="Localisation du point de prélèvement pour le sédiment utilisé pour cultiver la Salicorne (WGS84)" width="80%" /><img src="figures/proto_intechmer/prelevement03122019_rot.png" alt="Localisation du point de prélèvement pour le sédiment utilisé pour cultiver la Salicorne (WGS84)" width="35%" />
+<p class="caption">
+Figure 3: Localisation du point de prélèvement pour le sédiment utilisé pour cultiver la Salicorne (WGS84)
+</p>
+</div>
+</div>
+<div id="mise-en-culture-de-la-salicorne" class="section level4">
+<h4>Mise en culture de la salicorne</h4>
+<p>Neuf bacs de 120cm x 60cm ont été installés sur la dalle expérimentale du Cnam/Intechmer (Figure <a href="#fig:planIrrigation">4</a>). Trois systèmes d’irrigation distribuant un volume différent d’eau de mer ont été installés (Tableau <a href="#tab:volumeirrigation">1</a>). Chaque système est installé dans trois bacs pour évaluer la reproductibilité.</p>
+<div class="figure" style="text-align: center"><span id="fig:planIrrigation"></span>
+<img src="figures/proto_intechmer/plan_bac.jpg" alt="Cultures expérimentales de salicorne au Cnam-Intechmer" width="60%" />
+<p class="caption">
+Figure 4: Cultures expérimentales de salicorne au Cnam-Intechmer
+</p>
+</div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:volumeirrigation">Table 1: </span>Débit d’eau de mer pour chaque système d’irrigation testé
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Code couleur
+</th>
+<th style="text-align:right;">
+Débit goutte à goutte (l/h)
+</th>
+<th style="text-align:right;">
+Débit du système d’irrigation par bac (l/h)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Rouge
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+144
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Noir
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+72
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bleu
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+</tbody>
+</table>
+<p>L’irrigation est programmée par trois contrôleurs ESP RZXE (Rain Bird) couplés à des électrovannes 100 DVF (Rain Bird). Chaque contrôleur gère trois électrovannes correspondant à trois conditions différentes (Figure <a href="#fig:systemeIrrigation">5</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:systemeIrrigation"></span>
+<img src="figures/proto_intechmer/programmateur.png" alt="Contrôleurs et électrovannes installés pour les cultures expérimentales de salicorne au Cnam-Intechmer" width="40%" /><img src="figures/proto_intechmer/rampedistribution.png" alt="Contrôleurs et électrovannes installés pour les cultures expérimentales de salicorne au Cnam-Intechmer" width="40%" />
+<p class="caption">
+Figure 5: Contrôleurs et électrovannes installés pour les cultures expérimentales de salicorne au Cnam-Intechmer
+</p>
+</div>
+</div>
+<div id="suivi-de-la-croissance-des-plants-de-salicorne" class="section level4">
+<h4>Suivi de la croissance des plants de Salicorne</h4>
+<p>Dans chaque bac :</p>
+<ul>
+<li>Dénombrement du nombre de pied (toutes les 2 semaines)</li>
+<li>Distribution de la taille des plants par classe (toutes les 2 semaines)</li>
+<li>Mesure de l’activité photosynthétique à l’aide d’un PAM (1 fois par mois)</li>
+</ul>
+</div>
+</div>
+<div id="analyses-microbiologiques-et-métagénomiques" class="section level3">
+<h3>Analyses microbiologiques et métagénomiques</h3>
+<div id="analyses-microbiologiques-du-sédiment-des-bacs-de-culture" class="section level4">
+<h4>Analyses microbiologiques du sédiment des bacs de culture</h4>
+<p>Durant toute la phase de culture de la salicorne, le sédiment superficiel oxique de chaque bac est prélevé pour dénombrer la flore totale hétérotrophe par la méthode Unité formant Colonie (UFC). Ainsi, tous les 3 mois, environ 10g de sédiments superficiels sont prélevés dans chaque bac grâce à une seringue tronquée stérile. Chaque échantillon est placé dans un flacon stérile identifié (numéro du bac et date de prélèvement), puis immédiatement conservé entre 0 et +4°C. Les analyses microbiologiques sont réalisées dans les 24 heures qui suivent le prélèvement. Pour chaque bac, 5g de sédiments, préalablement échantillonnés, sont broyés au mortier dans 20mL d’eau de mer stérile (suspension mère). Cette suspension mère est ensuite diluée en eau de mer stérile (deux dilutions en cascade au 1/10eme). 0.1mL de la dilution au 1/100<sup>ème</sup> est étalée sur gélose marine agar (Difco, USA). Trois réplicas sont réalisés pour chaque bac. Les géloses marine agar sont incubées au moins 72 h à 22°C. Après incubation, les colonies sont dénombrées et le nombre d’UFC/g de sédiment est calculé.</p>
+</div>
+<div id="identification-par-métagénomique-des-groupes-taxonomiques-bactériens-présents-dans-le-sédiment-superficiel-oxique-des-bacs-de-culture." class="section level4">
+<h4>Identification par métagénomique des groupes taxonomiques bactériens présents dans le sédiment superficiel oxique des bacs de culture.</h4>
+<p>Pour chaque bac de culture, le reliquat des sédiments prélevés pour les analyses microbiologiques est congelé à -80°C jusqu’à l’extraction de l’ADN génomique total.
+L’ADN génomique total est extrait du sédiment grâce au kit d’extraction DNeasy PowerSoil de QIAGEN, et en suivant les instructions du fabriquant. A la fin de l’extraction, la concentration de chaque extrait d’ADN est mesurée et sa pureté vérifiée par spectrophotométrie (BioSpec-nano, Shimadzu). Les extraits d’ADN sont ensuite expédiés à la plateforme métagénomique INRA transfer (France) pour identifier les populations bactériennes par séquençage à haut débit. Le séquençage est réalisé sur un séquenceur MiSeq (Illumina). Les amorces utilisées ciblent les régions variables V4-V5 de la séquence de l’ARN ribosomique 16S des procaryotes (bactéries et archées). Le prétraitement des séquences est réalisé par un pipeline informatique développé par l’INRA et fonctionnant sous Mothur (version 1.36.1).
+Les barcodes, les primers, les séquences présentant des homo-polymères supérieurs à 8 pb ainsi que les chimères sont retirés des fichiers de séquences. Les séquences présentant 100% d’homologie entre elles, sont regroupées en séquences uniques, puis en OTU (operational taxonomic unit). L’analyse bio-informatique des données de séquençage (OTU) permet d’identifier les procaryotes présents (bactéries et archées) à différents niveaux taxonomiques (phylum, genre ou espèce). L’identification est réalisée sur la base de la taxonomie Greengenes.</p>
+</div>
+</div>
+<div id="granulométrie-du-sédiment" class="section level3">
+<h3>Granulométrie du sédiment</h3>
+<p><em>En cours de rédaction</em></p>
+</div>
+<div id="composition-élémentaire-du-sédiment" class="section level3">
+<h3>Composition élémentaire du sédiment</h3>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

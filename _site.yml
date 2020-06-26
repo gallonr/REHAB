@@ -1,0 +1,48 @@
+name: "REHAB : Expérimentations autour de la réhabilitation de claires pour une diversifiaction des productions"
+output_dir: "docs"
+navbar:
+  title: "REHAB"
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "Partenaires"
+      icon: fa-user-friends
+      href: partenaires.html
+    - text: "Expérimentation Intechmer"
+      icon: fa-envira
+      menu:
+        - text: "Protocole"
+          href: proto_intechmer.html
+        - text: "Suivi bacs de culture"
+          href: bac_intechmer.html
+        - text: "Suivi croissance salicorne"
+          href: croissance_intechmer.html
+    - text: "Expérimentation SMEL"
+      icon: fa-envira
+      menu:
+        - text: "Protocole"
+          href: proto_smel.html
+        - text: "Résultats"
+          href: resultat_smel.html
+        - text: "Suivi des claires"
+          href: suivi_claires.html
+    - text: "Bibliographie"
+      icon: fa-newspaper
+      href: bibliographie.html
+
+  right:
+    - icon: fa-envelope
+      href: mailto:RégisGALLON<regis.gallon@lecnam.net>?subject=[REHAB]
+    - icon: fa-github
+      href: https://github.com/gallonr/REHAB
+      
+output:
+  bookdown::html_document2:
+    theme: cosmo
+    number_sections: FALSE
+    df_print: kable
+    fig_caption: yes
+    css: "styles.css"
+    toc: TRUE
+    toc_float: TRUE

@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.HEIC
+*.MOV
+docs/figures/.DS_Store

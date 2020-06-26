@@ -1,0 +1,32 @@
+---
+title: "Culture de Salicorne"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(tidyverse)
+require(plotly)
+require(lubridate)
+```
+
+
+
+```{r culturegeneral, fig.align='center', out.width="70%", fig.cap="Dispositif expérimental mis en place dans une claire de la CABANOR"}
+knitr::include_graphics("data/culture_SMEL/20200518_135639.jpg")
+```
+
+
+```{r etagesuperieur, fig.align='center', out.width="70%", fig.cap="Etage supérieur : 18/05/2020"}
+knitr::include_graphics("data/culture_SMEL/20200518_135653.jpg")
+```
+
+
+```{r etagemoyen, fig.align='center',fig.show = "hold", out.width="40%", fig.cap="Etage moyen : 18/05/2020"}
+knitr::include_graphics("data/culture_SMEL/20200518_135657.jpg")
+knitr::include_graphics("data/culture_SMEL/20200518_135713.jpg")
+```
+
+
+```{r etageinferieur, fig.align='center', out.width="70%", fig.cap="Etage inférieur : 18/05/2020"}
+knitr::include_graphics("data/culture_SMEL/20200518_135725.jpg")
+```

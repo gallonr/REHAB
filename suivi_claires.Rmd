@@ -1,0 +1,59 @@
+---
+title: "Suivi des claires ostéicoles"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(tidyverse)
+require(plotly)
+require(lubridate)
+```
+
+```{r load_data,include=FALSE}
+source("internal_fonction.R")
+
+```
+
+### Claires 1
+
+```{r claire_letellier, echo=FALSE, message=FALSE, warning=FALSE}
+path="./data/ctd/letellier/"
+claire1 <- ctdCompilation(path)
+
+claire1 <- claire1 %>% gather(-Date,key="parameter",value="values") %>% separate(parameter,sep=" ", into=c("parameter"))
+
+claire1$Date <- dmy_hms(claire1$Date)
+claire1$values <- as.numeric(claire1$values)
+
+param.labs <- c("Profondeur (m)","Salinité (psu)","Température (°C)")
+names(param.labs) <- c("Profondeur","Salinité","Température")
+
+p <- ggplot(claire1,aes(x=Date,y=values))+geom_point(size=0.8)+
+  facet_grid(parameter~.,scales = "free_y",labeller = labeller(parameter=param.labs))+
+  xlab("Date")+ylab("Valeurs mesurées")
+
+ggplotly(p)
+
+```
+
+### Claire 2
+
+```{r claire_lafosse, echo=FALSE, message=FALSE, warning=FALSE}
+path="./data/ctd/lafosse/"
+claire2 <- ctdCompilation(path)
+
+claire2 <- claire2 %>% gather(-Date,key="parameter",value="values") %>% separate(parameter,sep=" ", into=c("parameter"))
+
+claire2$Date <- dmy_hms(claire2$Date)
+claire2$values <- as.numeric(claire2$values)
+
+param.labs <- c("Profondeur (m)","Salinité (psu)","Température (°C)")
+names(param.labs) <- c("Profondeur","Conductivité","Température")
+
+p <- ggplot(claire2,aes(x=Date,y=values))+geom_point(size=0.8)+
+  facet_grid(parameter~.,scales = "free_y",labeller = labeller(parameter=param.labs))+
+  xlab("Date")+ylab("Valeurs mesurées")
+
+ggplotly(p)
+
+```
