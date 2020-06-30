@@ -5,3 +5,5 @@
 *.HEIC
 *.MOV
 docs/figures/.DS_Store
+proto_intechmer_cache/html/__packages
+*.RData
