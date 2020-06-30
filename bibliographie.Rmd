@@ -1,0 +1,23 @@
+---
+title: "Bibliographie"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+
+> Abbas, H., Patel, R.M., and Parekh, V.B. (2018). Culturable endophytic bacteria from halotolerant *Salicornia brachata* : Isolation and plant growth promoting traits. Indian J. Appl. Microbiol. 21, 10–21.
+
+> Furtado, B.U., Gołębiewski, M., Skorupa, M., Hulisz, P., and Hrynkiewicz, K. (2019). Bacterial and Fungal Endophytic Microbiomes of *Salicornia europaea*. Appl. Environ. Microbiol. 85, e00305-19, /aem/85/13/AEM.00305-19.atom.
+
+> Nghiem-Xuan, R. (2019). Optimisation de la culture d’Haslea ostrearia en photobioréacteur. PhD Thesis. Nantes.
+> Razzaghi Komaresofla, B., Alikhani, H.A., Etesami, H., and Khoshkholgh-Sima, N.A. (2019). Improved growth and salinity tolerance of the halophyte *Salicornia sp.* by co–inoculation with endophytic and rhizosphere bacteria. Appl. Soil Ecol. 138, 160–170.
+
+> Silva, K.A.V.D., Oliveira, J.P., Fernandes, J.G., and Messias, A.S. (2019). Influence of Arbuscular Mycorrhizal Fungus in the Development of Salicornia in Saline Water. J. Adv. Microbiol. 1–6.
+
+> Szymańska, S., Borruso, L., Brusetti, L., Hulisz, P., Furtado, B., and Hrynkiewicz, K. (2018). Bacterial microbiome of root-associated endophytes of *Salicornia europaea* in correspondence to different levels of salinity. Environ. Sci. Pollut. Res. 25, 25420–25431.
+
+> Yamamoto, K., Shiwa, Y., Ishige, T., Sakamoto, H., Tanaka, K., Uchino, M., Tanaka, N., Oguri, S., Saitoh, H., and Tsushima, S. (2018). Bacterial Diversity Associated With the Rhizosphere and Endosphere of Two Halophytes: *Glaux maritima* and *Salicornia europaea*. Front. Microbiol. 9, 2878.
+
