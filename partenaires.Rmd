@@ -3,16 +3,19 @@ title: "Partenaires"
 ---
 
 #### [**Le SMEL**](https://www.smel.fr/)
+
 <img src="figures/smel.png" width="100" align="right">
 
-- *Sébastien Pien* : Chargée de missions - experte en habitats macrobenthiques et cartographie
-
+- *Sébastien Pien* : Chargé de missions
 
 #### [**Le Cnam-Intechmer**](http://www.intechmer.cnam.fr/l-institut/)
 
 <img src="figures/cnam.png" width="150" align="right">
 
-- *Régis Gallon* : Maitre de conférences - expert en écologie numérique - phycologue macrobenthique. 
+- *Régis Gallon* : Maitre de conférences - écologie numérique - phycologue macrobenthique. 
+- *Isabelle Poirier* : Maitre de conférences - Microbiologie
+- *Martine Bertrand* : Maitre de conférences - Biochimie - Phytoplancton
+- *Laure Verdier* : Assistante ingénieur
 
 
 #### [**Comité Régional Conchylicole Normandie-Mer du Nord**](https://www.poleaquimer.com/fr/reseau/details-membre.html?mem_id=96)
