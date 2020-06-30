@@ -37,3 +37,17 @@ ggplot(S10062020,aes(x=taille,y=nbPourc))+geom_bar(stat="identity")+facet_wrap(~
         axis.text.x = element_text(angle=90,vjust=0.5))
 ```
 
+
+### 29/06/2020
+
+```{r S29062020plot}
+S29062020 <- readxl::read_xlsx("./data/culture_Intechmer/fichier_donnees_culture.xlsx",sheet="29062020")
+S29062020 <- S29062020 %>% gather(-taille,key="bac",value="nombre") %>% drop_na() %>% group_by(bac) %>% mutate(nbPourc=(nombre/sum(nombre))*100)
+S29062020$taille <- factor(S29062020$taille,c("< 1cm","]1;2cm]","]2;4cm]","]4;6cm]","]6;8cm]","]8;10cm]","]10;12cm]","]12;14cm]","]14;16cm]","]16;18cm]","]18;20cm]",
+                                              "]20;22cm]","]22;24cm]","]24;26cm]"),ordered=T)
+ggplot(S29062020,aes(x=taille,y=nbPourc))+geom_bar(stat="identity")+facet_wrap(~bac,ncol=3)+
+  ylab("Pourcentage")+xlab("Classes de taille")+
+  theme(strip.text = element_text(face="bold",size=10),
+        axis.title = element_text(face="italic",size=12),
+        axis.text.x = element_text(angle=90,vjust=0.5))
+```
