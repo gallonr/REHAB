@@ -9,3 +9,4 @@ proto_intechmer_cache/html/__packages
 *.RData
 proto_intechmer_cache/html/__packages
 proto_intechmer_cache/html/cartesediment_97fdd4942c75baafb2cf34ca0d50abd3.RData
+.DS_Store
