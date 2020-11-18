@@ -12,7 +12,7 @@ navbar:
     - text: "Expérimentation Intechmer"
       icon: fa-envira
       menu:
-        - text: "Protocole"
+        - text: "Protocoles"
           href: proto_intechmer.html
         - text: "Suivi bacs de culture"
           href: bac_intechmer.html
@@ -21,11 +21,13 @@ navbar:
     - text: "Expérimentation SMEL"
       icon: fa-envira
       menu:
-        - text: "Protocole"
+        - text: "Protocoles"
           href: proto_smel.html
-        - text: "Résultats"
+        - text: "Résultats intermédiaires"
           href: resultat_smel.html
-        - text: "Suivi des claires"
+        - text: "Croissance de la Salicorne"
+          href: croissance_smel.html
+        - text: "Suivi physico-chimique des claires"
           href: suivi_claires.html
     - text: "Bibliographie"
       icon: fa-newspaper

@@ -1,0 +1,201 @@
+---
+title: "Croissance de la Salicorne dans les claires"
+toc: TRUE
+toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(tidyverse)
+require(plotly)
+require(lubridate)
+```
+
+### 06/04/2020
+
+```{r culturegeneral06042020, fig.align='center', out.width="70%", fig.cap="Aperçu général"}
+knitr::include_graphics("data/culture_SMEL/06042020/bacs.png")
+```
+
+
+```{r etagesuperieur06042020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/06042020/60cm.png")
+```
+
+
+```{r etagemoyen06042020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/06042020/40cm.png")
+```
+
+### 14/04/2020
+
+```{r culturegeneral14042020, fig.align='center', out.width="70%", fig.cap="Aperçu général"}
+knitr::include_graphics("data/culture_SMEL/14042020/bacs.png")
+```
+
+
+```{r etagesuperieur14042020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/14042020/60cm.png")
+```
+
+
+```{r etagemoyen14042020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/14042020/40cm.png")
+```
+
+### 28/04/2020
+
+```{r culturegeneral28042020, fig.align='center', out.width="70%", fig.cap="Aperçu général"}
+knitr::include_graphics("data/culture_SMEL/28042020/bacs.png")
+```
+
+
+```{r etagesuperieur28042020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/28042020/60cm.png")
+```
+
+
+```{r etagemoyen28042020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/28042020/40cm.png")
+```
+
+### 04/05/2020
+
+```{r culturegeneral04052020, fig.align='center', out.width="70%", fig.cap="Aperçu général"}
+knitr::include_graphics("data/culture_SMEL/04052020/bacs.png")
+```
+
+
+```{r etagesuperieur04052020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/04052020/60cm.png")
+```
+
+
+```{r etagemoyen04052020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/04052020/40cm.png")
+```
+
+
+```{r etageinferieur04052020, fig.align='center', out.width="70%", fig.cap="Etage inférieur"}
+knitr::include_graphics("data/culture_SMEL/04052020/20cm.png")
+```
+
+
+### 12/05/2020
+
+```{r culturegeneral12052020, fig.align='center', out.width="70%", fig.cap="Aperçu général"}
+knitr::include_graphics("data/culture_SMEL/12052020/bacs.png")
+```
+
+
+```{r etagesuperieur12052020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/12052020/60cm.png")
+```
+
+
+```{r etagemoyen12052020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/12052020/40cm.png")
+```
+
+### 18/05/2020
+
+```{r culturegeneral18052020, fig.align='center', out.width="70%", fig.cap="Aperçu général"}
+knitr::include_graphics("data/culture_SMEL/18052020/bacs.png")
+```
+
+
+```{r etagesuperieur18052020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/18052020/60cm.png")
+```
+
+
+```{r etagemoyen18052020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/18052020/40cm.png")
+```
+
+
+```{r etageinferieur18052020, fig.align='center', out.width="70%", fig.cap="Etage inférieur"}
+knitr::include_graphics("data/culture_SMEL/18052020/20cm.png")
+```
+
+### 06/06/2020
+
+```{r culturegeneral06062020, fig.align='center', out.width="70%", fig.cap="Aperçu général"}
+knitr::include_graphics("data/culture_SMEL/06062020/bacs.png")
+```
+
+
+```{r etagesuperieur06062020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/06062020/60cm.png")
+```
+
+
+```{r etagemoyen06062020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/06062020/40cm.png")
+```
+
+
+```{r etageinferieur06062020, fig.align='center', out.width="70%", fig.cap="Etage inférieur"}
+knitr::include_graphics("data/culture_SMEL/06062020/20cm.png")
+```
+
+### 15/06/2020
+
+```{r culturegeneral15062020, fig.align='center', out.width="70%", fig.cap="Aperçu général"}
+knitr::include_graphics("data/culture_SMEL/15062020/bacs.png")
+```
+
+
+```{r etagesuperieur15062020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/15062020/60cm.png")
+```
+
+
+```{r etagemoyen15062020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/15062020/40cm.png")
+```
+
+
+```{r etageinferieur15062020, fig.align='center', out.width="70%", fig.cap="Etage inférieur"}
+knitr::include_graphics("data/culture_SMEL/15062020/20cm.png")
+```
+
+### 10/07/2020
+
+```{r culturegeneral10072020, fig.align='center', out.width="70%", fig.cap="Aperçu général"}
+knitr::include_graphics("data/culture_SMEL/10072020/bacs.png")
+```
+
+
+```{r etagesuperieur10072020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/10072020/60cm.png")
+```
+
+
+```{r etagemoyen10072020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/10072020/40cm.png")
+```
+
+
+```{r etageinferieur10072020, fig.align='center', out.width="70%", fig.cap="Etage inférieur"}
+knitr::include_graphics("data/culture_SMEL/10072020/20cm.png")
+```
+
+### 11/08/2020
+
+
+```{r etagesuperieur11082020, fig.align='center', out.width="70%", fig.cap="Etage supérieur"}
+knitr::include_graphics("data/culture_SMEL/11082020/60cm.png")
+```
+
+
+```{r etagemoyen11082020, fig.align='center',fig.show = "hold", out.width="70%", fig.cap="Etage moyen"}
+knitr::include_graphics("data/culture_SMEL/11082020/40cm.png")
+```
+
+
+```{r etageinferieur11082020, fig.align='center', out.width="70%", fig.cap="Etage inférieur"}
+knitr::include_graphics("data/culture_SMEL/11082020/20cm.png")
+```
+
+
